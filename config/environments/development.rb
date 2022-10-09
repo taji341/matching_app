@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   config.after_initialize do
     Bullet.enable        = true
@@ -67,8 +69,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  #better_errors用、docker環境だと必要らしい
-  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
-  #deviceの設定
+  # better_errors用、docker環境だと必要らしい
+  BetterErrors::Middleware.allow_ip! '0.0.0.0/0'
+  # deviceの設定
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
