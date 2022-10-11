@@ -2,20 +2,20 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="field">
-      <h1 class="h3 mb-3 font-weight-normal">Please Signup</h1>
+      <h1 class="h3 mb-3 font-weight-normal">新規登録</h1>
       <%= f.label :email, class: "sr-only" %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email address" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "メールアドレス" %>
     </div>
     <div class="field">
       <%= f.label :password, class: "sr-only" %>
-      <%= f.password_field :password, class: "form-control", autocomplete: "new-password", placeholder: "Password(6文字以上で入力してください)" %>
+      <%= f.password_field :password, class: "form-control", autocomplete: "new-password", placeholder: "パスワード(6文字以上で入力してください)" %>
     </div>
     <div class="field">
       <%= f.label :password_confirmation, class: "sr-only" %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password 確認" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "パスワード確認" %>
     </div>
     <div class="actions">
-      <%= f.submit "Sign up", class: "btn btn-lg btn-success btn-block" %>
+      <%= f.submit "Sign up", class: "btn btn-lg btn-success btn-block update-button" %>
     </div>
   <% end %>
   <%= render "devise/shared/links" %>

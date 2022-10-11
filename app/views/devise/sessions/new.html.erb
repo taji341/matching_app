@@ -1,13 +1,13 @@
 <div class="text-center form-signin">  
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <h1 class="h3 mb-3 font-weight-normal">Please login</h1>
+      <h1 class="h3 mb-3 font-weight-normal">ログイン</h1>
       <%= f.label :email, class: "sr-only" %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email address" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "メールアドレス" %>
     </div>
     <div class="field">
       <%= f.label :password, class: "sr-only" %><br />
-      <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Password(6文字以上で入力してください)" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "パスワード(6文字以上で入力してください)" %>
     </div>
     <% if devise_mapping.rememberable? %>
       <h5 class="field checkbox mb-3">

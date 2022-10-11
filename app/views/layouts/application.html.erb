@@ -19,7 +19,7 @@
               Dropdown
             </button>
             <div class="dropdown-menu bg-dark">
-              <li><%= link_to 'My Page Top', "#" %></li>
+              <li><%= link_to 'My Page Top', users_mypage_path %></li>
               <li><%= link_to 'Setting', edit_user_registration_path %></li>
               <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
             </div>
