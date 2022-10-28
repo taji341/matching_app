@@ -19,7 +19,7 @@
               Dropdown
             </button>
             <div class="dropdown-menu bg-dark">
-              <li><%= link_to 'My Page Top', users_mypage_path %></li>
+              <li><%= link_to 'My Page Top', users_path %></li>
               <li><%= link_to 'Setting', edit_user_registration_path %></li>
               <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
             </div>
@@ -32,6 +32,12 @@
         <% end %>
       </div>
     </nav>
+    <% if flash[:notice] %>
+      <div class="alert alert-primary" role="alert"><strong><%= notice %></strong></div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger" role="alert"><strong><%= alert %></strong></div>
+    <% end %>
     <%= yield %>
     <footer class="footer bg-dark">
       <div class="container">

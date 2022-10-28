@@ -1,0 +1,6 @@
+class Lesson < ApplicationRecord
+  belongs_to :user
+  mount_uploader :image, ImageUploader
+  validates :title, :image, :address, :information, :price, :schedule, presence: true
+  validates :user_id, uniqueness: true
+end
