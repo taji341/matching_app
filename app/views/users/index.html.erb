@@ -11,21 +11,30 @@
       <div class="my-lesson">
         <div class="lesson-header text-center">
           <h1 class="pb-1"><%= @lesson.title %></h1>
-          <h6>場所  :<%= @lesson.address %></h6>
-          <h6>開催  :<%= @lesson.schedule %></h6>
+          <h6>場所:<%= @lesson.address %></h6>
+          <h6>開催:<%= @lesson.schedule %></h6>
         </div>
         <div class="lesson-body d-flex flex-row pt-4">
           <div class="row">
             <div class="lesson-image col-9">
               <%= image_tag @lesson.image.to_s, class: "img-fluid" %>
             </div>
-            <div class="profile col-3 shadow">
-              aaa
+            <div class="profile col-3 shadow d-flex flex-column">
+              <div class="lesson-user-info text-center p-3">
+                <%= image_tag current_user.image.to_s, class: "rounded-circle user-icon" %><br>
+                <div class="lesson-user-info p-3">
+                  <%= current_user.gender %>
+                  <%= current_user.name %>
+                </div>
+              </div>
+              <div class="lesson-introduction text-break">
+                <%= current_user.introduction %>
+              </div>
             </div>
           </div>
         </div>
         <div class="lesson-main pt-4">
-          <h5>料金: <%= @lesson.price %></h5>
+          <h5>料金:<%= @lesson.price %></h5>
           <div class="lesson-information shadow p-4">
             <%= simple_format(@lesson.information) %>
           </div>
