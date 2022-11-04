@@ -1,6 +1,16 @@
 class LessonsController < ApplicationController
+
   def new
     @lesson = Lesson.new
+  end
+
+  def index
+    @q = Lesson.ransack(params[:q])
+    @lessons = @q.result.includes([:user])
+  end
+
+  def show
+    @lesson = Lesson.find(params[:id])
   end
 
   def create

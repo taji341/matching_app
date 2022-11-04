@@ -4,14 +4,13 @@
       <div class="col-xl-6">
         <div class="text-center text-white">
           <h1 class="mb-5">Generate more leads with a professional landing page!</h1>
-          <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
-            <div class="row">
-              <div class="col">
-                <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email">
-              </div>
-              <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+            <div class="form-subscribe">
+              <%= search_form_for @q, url: lessons_path do |f| %>
+                <%= f.label :title_cont, 'エリア' %>
+                <%= f.search_field :title_cont, placeholder: "ピアノ", class: "form-control form-control-lg mb-4" %>
+                <%= f.submit "検索", class: "form-control btn-primary btn-lg mb-4 " %>
+              <% end %>
             </div>
-          </form>
         </div>
       </div>
     </div>

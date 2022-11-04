@@ -4,7 +4,7 @@
   </div>
   <div class="lesson-field shadow p-4 mb-4">
     <%= form_with model: @lesson do |f| %>
-      <%= render 'layouts/error_messages', model: f.object %>
+      <%= render 'shared/error_messages', model: f.object %>
       <div class="field">
         <%= f.label :title ,"タイトル" %>
         <%= f.text_field :title, class: "form-control", placeholder: "タイトル名" %>
