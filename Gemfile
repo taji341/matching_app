@@ -39,12 +39,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 # 以下追加
 gem 'bootstrap', '~> 4.3.1'
+gem 'carrierwave'
 gem 'devise'
 gem 'jquery-rails'
+gem 'mini_magick'
 gem 'rails-i18n'
 gem 'ransack'
-gem 'carrierwave'
-gem 'mini_magick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

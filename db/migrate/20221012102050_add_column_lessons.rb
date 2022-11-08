@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddColumnLessons < ActiveRecord::Migration[5.2]
   def change
     remove_column :lessons, :information, :string

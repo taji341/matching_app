@@ -26,6 +26,6 @@
         <%= f.submit "Update", class: "btn btn-lg btn-success btn-block " %>
       </div>
     <% end %>
-      <p class="acount-delete text-secondary">退会される方は下のボタンをクリック <%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "Are you sure?" }, class: "btn btn-lg btn-secondary", method: :delete %></p>
+      <p class="acount-delete text-secondary">退会される方は下のボタンをクリック <%= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "本当に退会してもよろしいですか?" }, class: "btn btn-lg btn-secondary", method: :delete %></p>
   </div>
 </div>

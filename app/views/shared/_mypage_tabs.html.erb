@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center">
   <div class="account text-center">
     <div class="account-image">
-      <%= image_tag "test-user.jpeg", class: "rounded-circle user-icon" %>
+      <%= image_tag current_user.image.to_s, class: "rounded-circle user-icon" %>
     </div>
     <div class="account-info">
       <%= current_user.name %>
@@ -14,7 +14,7 @@
       <%= link_to "My Page", users_path, class: "nav-link active" %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#!">Mail Box</a>
+      <%= link_to "Mail Box", messages_path, class: "nav-link" %>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#!">Favorite</a>

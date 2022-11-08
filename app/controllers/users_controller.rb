@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-
   def index
     @lesson = current_user.lesson
   end
@@ -18,11 +17,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:notice] = "ユーザーの設定を編集しました"
+      flash[:notice] = 'ユーザーの設定を編集しました'
       redirect_to users_path
     else
-      render "edit"
-      flash[:alert] = "エラー"
+      render 'edit'
+      flash[:alert] = 'エラー'
     end
   end
 

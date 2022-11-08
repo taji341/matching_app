@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Lesson < ApplicationRecord
   belongs_to :user
   mount_uploader :image, ImageUploader

@@ -1,0 +1,23 @@
+<div class="container">
+  <%= render "shared/mypage_tabs" %>
+  <%
+  @message_user_ids.each do |message_user_id|
+  message_user = User.find_by(id: message_user_id)
+  %>
+    <%= link_to message_path(message_user.id) do %>
+      <div class="shadow d-flex flex-row my-3">
+        <div class="m-2">
+          <%= image_tag(message_user.image.to_s, class: "rounded-circle message-icon") %>
+        </div>
+        <div class="d-flex flex-column text-dark">
+          <div class="ml-3">
+            <h4><%= message_user.name %></h4>
+          </div>
+          <div class="ml-3">
+            <%= truncate(message_user.messages.first.content, length: 50) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
