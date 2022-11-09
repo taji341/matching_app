@@ -12,6 +12,7 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find(params[:id])
+    impressionist(@lesson, nil, unique: [:ip_address])
     @message = Message.new
   end
 

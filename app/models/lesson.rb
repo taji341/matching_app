@@ -5,4 +5,5 @@ class Lesson < ApplicationRecord
   mount_uploader :image, ImageUploader
   validates :title, :image, :address, :information, :price, :schedule, presence: true
   validates :user_id, uniqueness: true
+  is_impressionable counter_cache: true
 end

@@ -4,22 +4,22 @@
       <%= image_tag current_user.image.to_s, class: "rounded-circle user-icon" %>
     </div>
     <div class="account-info">
-      <%= current_user.name %>
+      <h3><%= current_user.name %></h3>
     </div>
   </div>
 </div>
 <div class="mypage-tabs">
   <ul class="nav nav-pills nav-justified">
-    <li class="nav-item">
-      <%= link_to "My Page", users_path, class: "nav-link active" %>
+    <li class="nav-item <%= "active-tab" if current_page?(users_path) %>">
+      <%= link_to "My Page", users_path, class: "nav-link" %>
     </li>
-    <li class="nav-item">
+    <li class="nav-item <%= "active-tab" if current_page?(messages_path) %>">
       <%= link_to "Mail Box", messages_path, class: "nav-link" %>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#!">Favorite</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item <%= "active-tab" if current_page?(edit_user_path(current_user.id)) %>">
       <%= link_to "Setting", edit_user_path(current_user.id), class: "nav-link" %>
     </li>
   </ul>
