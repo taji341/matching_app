@@ -8,18 +8,34 @@
     <div class="row">
       <div class="lesson-image col-9">
         <%= image_tag @lesson.image.to_s, class: "img-fluid" %>
+        <div class="view-count text-info mr-4">
+          <i class="fa-solid fa-eye"></i>
+          <%= @lesson.impressions_count %>
+          <div id="favorite-<%= @lesson.id %>">
+            <%= render "shared/favorites/favorite" %>
+          </div>
+        </div>
       </div>
       <div class="profile col-3 shadow d-flex flex-column">
         <div class="lesson-user-info text-center p-3">
           <%= image_tag current_user.image.to_s, class: "rounded-circle user-icon" %><br>
           <div class="lesson-user-info p-3">
-            <%= current_user.gender %>
-            <%= current_user.name %>
+            <% if current_user.gender == 1 %>
+              <i class="fa-sharp fa-solid fa-mars fa-2x text-primary"></i>
+            <% else %>
+              <i class="fa-sharp fa-solid fa-venus fa-2x text-danger"></i>
+            <% end %>
+            <h4 class="d-inline pl-2"><%= current_user.name %></h4>
           </div>
         </div>
         <div class="lesson-introduction text-break">
           <%= current_user.introduction %>
         </div>
+        <% unless current_page?(users_path) %>
+          <div class="like-btn text-center btn btn-warning btn-lg btn-block">
+            <p>お気に入り登録</p><%= render "shared/favorites/favorite" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

@@ -33,12 +33,13 @@
                   <div class="view-count text-info">
                     <i class="fa-solid fa-eye"></i>
                     <%= lesson.impressions_count %>
+                    <i class="fa-lg fas fa-heart liked"></i>
+                    <%= lesson.favorites.length %>
                   </div>
                   <div class="user-profile d-flex flex-row justify-content-center">
                     <%= image_tag lesson.user.image.to_s, class: "rounded-circle lesson-icon" %>
                     <p class="mx-5"><%= lesson.user.name %></p>
                     <p class=""><%= lesson.address %></p>
-                    
                   </div>
                 </div>
               </div>

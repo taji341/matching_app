@@ -7,7 +7,7 @@ class LessonsController < ApplicationController
 
   def index
     @q = Lesson.ransack(params[:q])
-    @lessons = @q.result.includes([:user])
+    @lessons = @q.result.includes([:user, :favorites])
   end
 
   def show
