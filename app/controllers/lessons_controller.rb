@@ -23,7 +23,6 @@ class LessonsController < ApplicationController
       redirect_to users_path
     else
       render 'new'
-      flash[:alert] = 'エラー'
     end
   end
 
