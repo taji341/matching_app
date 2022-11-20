@@ -6,8 +6,9 @@
     <div class="account-info">
       <% if current_user.gender == 1 %>
         <i class="fa-sharp fa-solid fa-mars fa-2x text-primary"></i>
-      <% else %>
+      <% elsif current_user.gender == 2 %>
         <i class="fa-sharp fa-solid fa-venus fa-2x text-danger"></i>
+      <% else %>
       <% end %>
       <h3 class="d-inline p-3"><%= current_user.name %></h3>
     </div>

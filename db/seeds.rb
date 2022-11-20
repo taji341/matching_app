@@ -47,8 +47,7 @@ User.all.each do |user|
     user_id: user.id,
     to_user_id: user.id + 1,
     content: '----------テストメッセージ------------
-              ----------テストメッセージ------------',
-    to_user_opentime: Time.now
+              ----------テストメッセージ------------'
   )
 end
 

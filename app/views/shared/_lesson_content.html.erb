@@ -21,8 +21,9 @@
           <div class="lesson-user-info p-3">
             <% if current_user.gender == 1 %>
               <i class="fa-sharp fa-solid fa-mars fa-2x text-primary"></i>
-            <% else %>
+            <% elsif current_user.gender == 2 %>
               <i class="fa-sharp fa-solid fa-venus fa-2x text-danger"></i>
+            <% else %>
             <% end %>
             <h4 class="d-inline pl-2"><%= current_user.name %></h4>
           </div>

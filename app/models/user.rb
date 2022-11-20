@@ -5,8 +5,7 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :favorites, dependent: :destroy 
   mount_uploader :image, ImageUploader
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  validates :introduction, length: { maximum: 200 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

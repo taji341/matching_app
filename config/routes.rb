@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  post 'home/guest_sign_in', to: 'home#guest_sign_in'
   devise_for :users
   resources :messages
   resources :users do
@@ -10,5 +11,4 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
   end
   root 'home#top'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

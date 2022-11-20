@@ -26,6 +26,9 @@
       <% else %>
         <div class="d-flex justify-content-end">
           <div class="p-2">
+            <%= link_to 'ゲストログイン（閲覧用）', home_guest_sign_in_path, class: "btn btn-info", method: :post %>
+          </div>
+          <div class="p-2">
             <%= link_to 'Signup', new_user_registration_path, class: "btn btn-success" %>
           </div>
           <div class="p-2">
@@ -35,10 +38,10 @@
       <% end %>
     </nav>
     <% if flash[:notice] %>
-      <div class="alert alert-primary" role="alert"><strong><%= notice %></strong></div>
+      <div class="alert alert-primary m-0" role="alert"><strong><%= notice %></strong></div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="alert alert-danger" role="alert"><strong><%= alert %></strong></div>
+      <div class="alert alert-danger m-0" role="alert"><strong><%= alert %></strong></div>
     <% end %>
     <%= yield %>
     <footer class="footer bg-dark">
