@@ -11,9 +11,8 @@
         <div class="view-count text-info mr-4">
           <i class="fa-solid fa-eye"></i>
           <%= @lesson.impressions_count %>
-          <div id="favorite-<%= @lesson.id %>">
-            <%= render "shared/favorites/favorite" %>
-          </div>
+          <i class="fa-lg fas fa-heart liked"></i>
+          <%= @lesson.favorites.length %>
         </div>
       </div>
       <div class="profile col-3 shadow d-flex flex-column">
