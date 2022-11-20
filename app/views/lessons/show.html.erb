@@ -7,6 +7,7 @@
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <%= form_with model: @message do |f| %>
+          <%= render 'shared/error_messages', model: f.object %>
           <%= f.text_area :content, class: "form-control mb-3", size: "20x10", placeholder: "申込内容を記載してください" %>
           <%= f.hidden_field :to_user_id, value: @lesson.user.id %>
           <%= f.submit "メッセージを送信する", class: "btn btn-lg btn-success btn-block mb-3" %>

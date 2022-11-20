@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :favorites, dependent: :destroy 
   mount_uploader :image, ImageUploader
-  validates :introduction, length: { maximum: 200 }
+  validates :introduction, length: { maximum: 300 }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

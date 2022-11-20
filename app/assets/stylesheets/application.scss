@@ -25,3 +25,9 @@
 .active-tab {
   background-color: aqua;
 }
+
+@media screen and (max-width: 480px) {
+  .header-logo {
+    display: none;
+  }
+}

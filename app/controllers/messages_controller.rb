@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
       flash[:notice] = '送信しました！'
       redirect_to message_path(@message.id)
     else
-      redirect_to('/')
+      redirect_back(fallback_location: root_path)
       flash[:alert] = '送信できませんでした'
     end
   end

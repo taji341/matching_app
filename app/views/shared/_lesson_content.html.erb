@@ -17,19 +17,19 @@
       </div>
       <div class="profile col-3 shadow d-flex flex-column">
         <div class="lesson-user-info text-center p-3">
-          <%= image_tag current_user.image.to_s, class: "rounded-circle user-icon" %><br>
+          <%= image_tag @lesson.image.to_s, class: "rounded-circle user-icon" %><br>
           <div class="lesson-user-info p-3">
-            <% if current_user.gender == 1 %>
+            <% if @lesson.user.gender == 1 %>
               <i class="fa-sharp fa-solid fa-mars fa-2x text-primary"></i>
-            <% elsif current_user.gender == 2 %>
+            <% elsif @lesson.user.gender == 2 %>
               <i class="fa-sharp fa-solid fa-venus fa-2x text-danger"></i>
             <% else %>
             <% end %>
-            <h4 class="d-inline pl-2"><%= current_user.name %></h4>
+            <h4 class="d-inline pl-2"><%= @lesson.user.name %></h4>
           </div>
         </div>
         <div class="lesson-introduction text-break">
-          <%= current_user.introduction %>
+          <%= @lesson.user.introduction %>
         </div>
         <% unless current_page?(users_path) %>
           <div class="like-btn text-center btn btn-warning btn-lg btn-block">

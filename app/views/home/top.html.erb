@@ -1,59 +1,61 @@
 <header class="masthead">
   <div class="container position-relative">
     <div class="row justify-content-center">
-      <div class="col-xl-6">
+      <div class="col-xl-8">
         <div class="text-center text-white">
-          <h1 class="mb-5">Generate more leads with a professional landing page!</h1>
+          <h2 class="mb-5 font-weight-bold">音楽を始めてみたくて、誰かに教わりたい・・・<br>自分の持つスキルを何かに活かしたい・・・<br>そんな人達を結ぶマッチングサイトです。
+          </h2>
             <div class="form-subscribe">
               <%= search_form_for @q, url: lessons_path do |f| %>
-                <%= f.label :title_cont, 'エリア' %>
+                <h3><%= f.label :title_cont, 'レッスンを楽器名で検索！' %></h3>
                 <%= f.search_field :title_cont, placeholder: "ピアノ", class: "form-control form-control-lg mb-4" %>
                 <%= f.submit "検索", class: "form-control btn-primary btn-lg mb-4 " %>
               <% end %>
             </div>
+          <h2 class="pt-5 text-warning font-weight-bold">レッスンを登録する方、予約をしたい方は右上の黄色いボタンをクリック！</h2>
         </div>
       </div>
     </div>
   </div>
 </header>
-<section class="testimonials text-center bg-light">
-    <div class="container">
-      <h2 class="mb-5">人気のレッスン</h2>
-      <div class="bd-example">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <% @rank_lessons.each_with_index do |lesson, i| %>
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleCaptions" data-slide-to="<%= i %>" class="<%= "active" if i.zero? %>"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-              <div class="carousel-item <%= "active" if i.zero? %>">
-                <%= image_tag lesson.image.to_s, class: "d-block w-100" %>
-                <div class="carousel-caption d-none d-md-block bg-dark count">
-                  <h3 class=""><%= lesson.title %></h3>
-                  <div class="view-count text-info">
-                    <i class="fa-solid fa-eye"></i>
-                    <%= lesson.impressions_count %>
-                    <i class="fa-lg fas fa-heart liked"></i>
-                    <%= lesson.favorites.length %>
-                  </div>
-                  <div class="user-profile d-flex flex-row justify-content-center">
-                    <%= image_tag lesson.user.image.to_s, class: "rounded-circle lesson-icon" %>
-                    <p class="mx-5"><%= lesson.user.name %></p>
-                    <p class=""><%= lesson.address %></p>
-                  </div>
-                </div>
+<div class="top-lesson">
+<div class="container pb-5">
+  <h2 class="text-center p-5">人気のレッスン</h2>
+  <div class="bd-example shadow-lg">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <% @rank_lessons.each_with_index do |lesson, i| %>
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="<%= i %>" class="<%= "active" if i.zero? %>"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item <%= "active" if i.zero? %>">
+            <%= image_tag lesson.image.to_s, class: "d-block w-100" %>
+            <div class="carousel-caption d-none d-md-block bg-dark count">
+              <h3 class=""><%= lesson.title %></h3>
+              <div class="view-count text-info">
+                <i class="fa-solid fa-eye"></i>
+                <%= lesson.impressions_count %>
+                <i class="fa-lg fas fa-heart liked"></i>
+                <%= lesson.favorites.length %>
+              </div>
+              <div class="user-profile d-flex flex-row justify-content-center">
+                <%= image_tag lesson.user.image.to_s, class: "rounded-circle lesson-icon" %>
+                <p class="mx-5"><%= lesson.user.name %></p>
+                <p class=""><%= lesson.address %></p>
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          <% end %>
+          </div>
         </div>
-      </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      <% end %>
     </div>
-</section>
+  </div>
+</div>
+</div>
