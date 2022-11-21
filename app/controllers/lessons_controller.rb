@@ -7,7 +7,8 @@ class LessonsController < ApplicationController
 
   def index
     @q = Lesson.ransack(params[:q])
-    @lessons = @q.result.includes([:user, :favorites])
+    @lesson_count = @q.result.includes([:user, :favorites]).count
+    @lessons = @q.result.includes([:user, :favorites]).page(params[:page])
   end
 
   def show
