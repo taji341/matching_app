@@ -12,7 +12,11 @@
                 <%= f.submit "検索", class: "form-control btn-primary btn-lg mb-4 " %>
               <% end %>
             </div>
-          <h2 class="pt-5 text-warning font-weight-bold">レッスンを登録する方、予約をしたい方は右上の黄色いボタンをクリック！</h2>
+          <% if user_signed_in? %>
+            <h2 class="pt-5 text-warning font-weight-bold">レッスンを登録する方、予約をしたい方は右上の黄色いボタンをクリック！</h2>
+          <% else %>
+            <h2 class="pt-5 text-warning font-weight-bold">レッスンを登録する方、予約をしたい方は右上の緑色のボタンをクリック！</h2>
+          <% end %>
         </div>
       </div>
     </div>
@@ -20,6 +24,16 @@
 </header>
 <div class="top-lesson">
 <div class="container pb-5">
+  <div class="guidance p-5">
+    <h2 class="text-center pb-3">How To Use</h2>
+    <div class="guidance-content shadow p-5">
+      <ul>
+        <li>まずは楽器を検索してみましょう!</li>
+        <li>気になるレッスンが見つかりましたか？<br>右上の黄色のボタンからユーザー設定をして、メッセージを送ってみましょう</li>
+        <li>自分のレッスンを登録するには、右上の青色のボタンをクリック!</li>
+      </ul>
+    </div>
+  </div>
   <h2 class="text-center p-5">人気のレッスン</h2>
   <div class="bd-example shadow-lg">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -38,7 +52,7 @@
                 <i class="fa-lg fas fa-heart liked"></i>
                 <%= lesson.favorites.length %>
               </div>
-              <div class="user-profile d-flex flex-row justify-content-center">
+              <div class="user-profile d-flex justify-content-center">
                 <%= image_tag lesson.user.image.to_s, class: "rounded-circle lesson-icon" %>
                 <p class="mx-5"><%= lesson.user.name %></p>
                 <p class=""><%= lesson.address %></p>

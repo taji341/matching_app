@@ -15,14 +15,14 @@
                 <%= lesson.favorites.length %>
               </div>
             </div>
-            <div class="bg-info text-white">
-              <h4 class="pl-3"><%= lesson.title %></h4>
-              <div class="user-profile d-flex flex-row p-2">
-                <%= image_tag lesson.user.image.to_s, class: "rounded-circle lesson-icon" %>
-                <p class="col-7"><%= lesson.user.name %></p>
-                <p class="col-2"><%= lesson.address %></p>
-              </div>
+          <div class="bg-info text-white">
+            <h4 class="pl-3"><%= lesson.title %></h4>
+            <div class="user-profile d-flex justify-content-between p-2">
+              <%= image_tag lesson.user.image.to_s, class: "rounded-circle lesson-icon", alt: "レッスン画像" %>
+              <p><%= lesson.user.name %></p>
+              <p><i class="fa-lg fa-solid fa-location-dot pr-2"></i><%= lesson.address %></p>
             </div>
+          </div> 
           <% end %>
         </div>
       </div>

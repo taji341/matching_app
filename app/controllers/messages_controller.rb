@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 class MessagesController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @user = User.find_by(id: current_user.id)
-    @message_user_ids = Message.where(to_user_id: @user.id).or(Message.where(user_id: @user.id)).distinct.pluck(:user_id)
-    @message_user_ids.delete(@user.id)
+    @message_user_ids = Message.where(to_user_id: current_user.id).or(Message.where(user_id: current_user.id)).distinct.pluck(:user_id)
   end
 
   def show

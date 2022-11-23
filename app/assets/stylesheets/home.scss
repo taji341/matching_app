@@ -96,6 +96,16 @@ footer {
   }
 }
 
-.top-lesson {
-  background-color: #dcdcdc;
+.top-guidance {
+  color: rgb(0, 169, 0);
+}
+
+.guidance-content {
+  font-size: 24px;
+  border-radius: 50px;
+  background-color: #038e4492;
+  li {
+    list-style: none;
+    padding: 5px 0;
+  }
 }

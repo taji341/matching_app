@@ -27,6 +27,7 @@
 
 .profile {
   position: relative;
+  background-color: #baffcfa1;
 }
 
 .like-btn {
@@ -36,9 +37,13 @@
 }
 
 .lesson-content {
-  border: 1px solid rgb(226, 226, 226);
+  border: 1px solid #00000037;
 }
 
 .lesson-pagenation {
   font-size: 24px;
+}
+
+.lesson-information {
+  background-color: #baffcfa1;
 }

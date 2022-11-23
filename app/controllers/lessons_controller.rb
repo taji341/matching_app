@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class LessonsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   def new
     @lesson = Lesson.new
   end
@@ -46,7 +47,7 @@ class LessonsController < ApplicationController
     @lesson = Lesson.find(params[:id])
     @lesson.destroy
     flash[:notice] = 'レッスンを削除しました'
-    redirect_to
+    redirect_to users_path
   end
 
   private
