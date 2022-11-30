@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class Lesson < ApplicationRecord
   belongs_to :user
   has_many :favorites, dependent: :destroy
@@ -8,5 +7,4 @@ class Lesson < ApplicationRecord
   validates :user_id, uniqueness: true
   validates :information, length: { maximum: 1000 }
   is_impressionable counter_cache: true
-
 end

@@ -1,5 +1,5 @@
 FROM ruby:2.7.0
-RUN apt-get update -qq && apt-get install -y build-essential nodejs graphviz
+RUN apt-get update -qq && apt-get install -y build-essential nodejs graphviz mariadb-client
 RUN bundle config set --global force_ruby_platform true
 RUN mkdir /app
 WORKDIR /app
