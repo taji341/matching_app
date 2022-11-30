@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :rooms, through: :room_users
   has_many :messages, dependent: :destroy
-  has_many :favorites, dependent: :destroy 
+  has_many :favorites, dependent: :destroy
   mount_uploader :image, ImageUploader
   validates :name, presence: true
   validates :introduction, length: { maximum: 300 }

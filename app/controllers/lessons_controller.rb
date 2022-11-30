@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 class LessonsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: %i(index show)
   def new
     @lesson = Lesson.new
   end
 
   def index
     @q = Lesson.ransack(params[:q])
-    @lesson_count = @q.result.includes([:user, :favorites]).count
-    @lessons = @q.result.includes([:user, :favorites]).page(params[:page])
+    @lesson_count = @q.result.includes(%i(user favorites)).count
+    @lessons = @q.result.includes(%i(user favorites)).page(params[:page])
   end
 
   def show

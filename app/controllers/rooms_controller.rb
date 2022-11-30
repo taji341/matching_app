@@ -1,8 +1,7 @@
-class RoomsController < ApplicationController
+# frozen_string_literal: true
 
-  def index
-    
-  end
+class RoomsController < ApplicationController
+  def index; end
 
   def create
     @room = Room.new(room_params)
@@ -13,6 +12,6 @@ class RoomsController < ApplicationController
   private
 
   def room_params
-  params.permit(user_ids: [])
+    params.permit(user_ids: [])
   end
 end

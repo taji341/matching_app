@@ -8,7 +8,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  def default_url(*args)
-    "test-user.jpeg"
+  def default_url(*_args)
+    'test-user.jpeg'
   end
 end

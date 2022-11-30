@@ -3,7 +3,7 @@
     <div class="row justify-content-center">
       <div class="col-xl-8">
         <div class="text-center text-white">
-          <h2 class="mb-5 font-weight-bold">音楽を始めてみたくて、誰かに教わりたい・・・<br>自分の持つスキルを何かに活かしたい・・・<br>そんな人達を結ぶマッチングサイトです。
+          <h2 class="mb-5 font-weight-bold top-text">音楽を始めてみたくて、誰かに教わりたい・・・<br>自分の持つスキルを何かに活かしたい・・・<br>そんな人達を結ぶマッチングサイトです。
           </h2>
             <div class="form-subscribe">
               <%= search_form_for @q, url: lessons_path do |f| %>
@@ -55,7 +55,7 @@
               <div class="user-profile d-flex justify-content-center">
                 <%= image_tag lesson.user.image.to_s, class: "rounded-circle lesson-icon" %>
                 <p class="mx-5"><%= lesson.user.name %></p>
-                <p class=""><%= lesson.address %></p>
+                <p class=""><i class="fa-lg fa-solid fa-location-dot pr-2"></i><%= lesson.address %></p>
               </div>
             </div>
           </div>
