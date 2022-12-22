@@ -3,8 +3,8 @@
 Rails.application.routes.draw do
   post 'home/guest_sign_in', to: 'home#guest_sign_in'
   devise_for :users
-  resources :rooms, only: %i(index create destroy) do
-    resources :messages
+  resources :rooms, only: %i(index create) do
+    resources :messages, only: %i(create index)
   end
   resources :users do
     get :favorites, on: :collection

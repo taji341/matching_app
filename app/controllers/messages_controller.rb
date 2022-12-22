@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @room = Room.find(params[:room_id])
     @messages = @room.messages.includes(:user)
-    unread_messages = @messages.where(to_user_opentime: nil, user_id: !current_user.id)
+    unread_messages = @messages.where(to_user_opentime: nil).where.not(user_id: current_user.id)
     unread_messages.each do |unread_message|
       unread_message.to_user_opentime = Date.today.to_time
       unread_message.save

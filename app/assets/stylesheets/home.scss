@@ -101,7 +101,6 @@ footer {
 }
 
 .guidance-content {
-  font-size: 24px;
   border-radius: 50px;
   background-color: #038e4492;
   li {
@@ -112,4 +111,10 @@ footer {
 
 .top-text {
   color: #00ff7b;
+}
+
+@media screen and (max-width: 768px) {
+  .guidance {
+    display: none;
+  }
 }

@@ -20,7 +20,7 @@ ja:
         introduction: 自己紹介
         gender: 性別
       lesson:
-        title: 会社名
+        title: レッスンタイトル
         image: レッスン画像
         address: 開催場所
         information: レッスン紹介
