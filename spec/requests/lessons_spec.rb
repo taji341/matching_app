@@ -5,9 +5,11 @@ require 'rails_helper'
 RSpec.describe 'Lessons', type: :request do
   let!(:user) { create(:user) }
   let!(:lesson) { create(:lesson, user: user) }
+
   before do
     sign_in user
   end
+
   describe 'ページの表示' do
     it 'レッスン新規登録ページが正常に表示される事' do
       get new_lesson_path

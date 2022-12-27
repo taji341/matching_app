@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   let!(:user) { create(:user) }
+
   describe 'ページの表示' do
     it '新規登録ページが正常に表示される事' do
       get new_user_registration_path

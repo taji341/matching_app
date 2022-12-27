@@ -5,16 +5,19 @@ RSpec.describe "Messages", type: :system do
   let!(:user1) { create(:user1) }
   let!(:room) { create(:room) }
   let!(:room_user) { create(:room_user, user: user, room: room) }
-  let!(:room_user1) { create(:room_user, user:user1, room: room) }
+  let!(:room_user1) { create(:room_user, user: user1, room: room) }
   let!(:message) { create(:message, user: user, room: room) }
   let!(:message1) { create(:message, user: user1, room: room) }
+
   before do
     sign_in user
   end
+
   describe "トークルーム一覧ページ" do
     before do
       visit rooms_path
     end
+
     it "メッセージルームの一覧が表示されている事" do
       expect(page).to have_content user1.name
       expect(page).to have_content message1.content
@@ -32,10 +35,12 @@ RSpec.describe "Messages", type: :system do
       expect(current_path).to eq room_messages_path(room.id)
     end
   end
+
   describe "メッセージ一覧ページ" do
     before do
       visit room_messages_path(room.id)
     end
+
     it "メッセージが正しく表示されている事" do
       expect(page).to have_content message.content
       expect(page).to have_content message1.content
@@ -50,5 +55,4 @@ RSpec.describe "Messages", type: :system do
       expect(page).to have_content "メッセージを送信"
     end
   end
-  
 end

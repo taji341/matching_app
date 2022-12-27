@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe 'Messages', type: :request do
   let!(:user) { create(:user) }
   let!(:room) { create(:room) }
+
   describe 'ページの表示' do
     it 'トークルームページが正常に表示される事' do
       sign_in user

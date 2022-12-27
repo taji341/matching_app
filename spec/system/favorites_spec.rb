@@ -7,8 +7,9 @@ RSpec.describe "Favorites", type: :system do
   let!(:favorite) { create(:favorite, user: user, lesson: lesson) }
 
   before do
-    sign_in user  
+    sign_in user
   end
+
   describe "お気に入り登録機能" do
     it "お気に入り登録したレッスンが一覧で表示される事" do
       visit favorites_users_path

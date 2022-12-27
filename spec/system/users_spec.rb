@@ -3,11 +3,13 @@ require 'rails_helper'
 RSpec.describe "Users", type: :system do
   let!(:user) { create(:user) }
   let!(:user1) { create(:user1) }
+
   describe "ユーザー情報編集ページ" do
     before do
       sign_in user
       visit edit_user_path(user.id)
     end
+
     it "正しく編集がされる事" do
       fill_in '名前', with: '編集しました'
       click_on "登録する"
