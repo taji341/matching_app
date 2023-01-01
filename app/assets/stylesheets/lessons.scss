@@ -1,0 +1,49 @@
+// Place all the styles related to the lessons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.field {
+  padding-bottom: 10px; 
+}
+
+.lesson-icon {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.user-profile {
+  align-items: center;
+}
+
+.lesson-image {
+  position: relative;
+  .view-count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.8rem;
+  }
+}
+
+.profile {
+  position: relative;
+  background-color: #baffcfa1;
+}
+
+.like-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.lesson-content {
+  border: 1px solid #00000037;
+}
+
+.lesson-pagenation {
+  font-size: 24px;
+}
+
+.lesson-information {
+  background-color: #baffcfa1;
+}

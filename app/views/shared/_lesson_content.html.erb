@@ -1,0 +1,48 @@
+<div class="my-lesson">
+  <div class="lesson-header text-center m-3">
+    <h1 class="pb-3"><%= @lesson.title %></h1>
+    <h5>場所:  <%= @lesson.address %></h5>
+    <h5>開催:  <%= @lesson.schedule %></h5>
+  </div>
+  <div class="lesson-body d-flex flex-row pt-4">
+    <div class="row">
+      <div class="lesson-image col-9">
+        <%= image_tag @lesson.image.to_s, class: "img-fluid" %>
+        <div class="view-count text-info mr-4">
+          <i class="fa-solid fa-eye"></i>
+          <%= @lesson.impressions_count %>
+          <i class="fa-lg fas fa-heart liked"></i>
+          <%= @lesson.favorites.length %>
+        </div>
+      </div>
+      <div class="profile col-3 shadow d-flex flex-column">
+        <div class="text-center p-3">
+          <%= image_tag @lesson.image.to_s, class: "rounded-circle user-icon" %><br>
+          <div class="p-3">
+            <% if @lesson.user.gender == 1 %>
+              <i class="fa-sharp fa-solid fa-mars fa-2x text-primary"></i>
+            <% elsif @lesson.user.gender == 2 %>
+              <i class="fa-sharp fa-solid fa-venus fa-2x text-danger"></i>
+            <% else %>
+            <% end %>
+            <h4 class="d-inline pl-2"><%= @lesson.user.name %></h4>
+          </div>
+        </div>
+        <div class="lesson-introduction text-break">
+          <%= @lesson.user.introduction %>
+        </div>
+        <% unless current_page?(users_path) %>
+          <div class="like-btn text-center btn btn-warning btn-lg btn-block">
+            <p>お気に入り登録</p><%= render "shared/favorites/favorite" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="lesson-main pt-4">
+    <h5>料金:<%= @lesson.price %></h5>
+    <div class="lesson-information shadow p-4">
+      <%= simple_format(@lesson.information) %>
+    </div>
+  </div>
+</div>

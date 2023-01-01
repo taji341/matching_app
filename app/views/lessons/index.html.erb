@@ -1,0 +1,33 @@
+<div class="container-fiuld">
+  <h4 class="p-4">検索結果:<%= @lesson_count %>件</h4>
+  <div class="row">
+    <% @lessons.each do |lesson| %>
+    <div class="col-sm-6 col-lg-4 col-xl-4 p-5 lesson-content">
+      <div class="shadow-lg m-3">
+        <%= link_to lesson_path(lesson) do %>
+          <div class="lesson-image">
+            <%= image_tag lesson.image.to_s, class: "img-fluid" %>
+            <div class="view-count text-info">
+              <i class="fa-solid fa-eye"></i>
+              <%= lesson.impressions_count %>
+              <i class="fa-lg fas fa-heart liked"></i>
+              <%= lesson.favorites.length %>
+            </div>
+          </div>
+          <div class="bg-info text-white">
+            <h4 class="pl-3"><%= lesson.title %></h4>
+            <div class="user-profile d-flex justify-content-between p-2">
+              <%= image_tag lesson.user.image.to_s, class: "rounded-circle lesson-icon", alt: "レッスン画像" %>
+              <p><%= lesson.user.name %></p>
+              <p><i class="fa-lg fa-solid fa-location-dot pr-2"></i><%= lesson.address %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>  
+  </div>
+  <div class="lesson-pagenation p-4 ml-4">
+    <%= paginate @lessons, theme: 'twitter-bootstrap-4' %>
+  </div>
+</div>

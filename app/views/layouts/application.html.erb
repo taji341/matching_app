@@ -1,15 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>App</title>
+    <title>Music Cource</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/9709542249.js" crossorigin="anonymous"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <nav class="navbar bg-dark static-top">
+      <%= link_to "Music Cource", root_path, class: "navbar-brand text-light header-logo" %>
+      <% if user_signed_in? %>
+        <div class="d-flex justify-content-end">
+          <div class="p-2">
+            <%= link_to 'MyPageTop', users_path, class: "btn btn-info" %>
+          </div>
+          <div class="p-2">
+            <%= link_to 'Setting', edit_user_path(current_user.id), class: "btn btn-warning" %>
+          </div>
+          <div class="p-2">
+            <%= link_to 'Logout', destroy_user_session_path, class: "btn btn-light", method: :delete %>
+          </div>
+        </div>
+      <% else %>
+        <div class="d-flex justify-content-end">
+          <div class="p-2">
+            <%= link_to 'ゲストログイン（閲覧用）', home_guest_sign_in_path, class: "btn btn-info", method: :post %>
+          </div>
+          <div class="p-2">
+            <%= link_to 'Signup', new_user_registration_path, class: "btn btn-success" %>
+          </div>
+          <div class="p-2">
+            <%= link_to 'Login', new_user_session_path, class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </nav>
+    <% if flash[:notice] %>
+      <div class="alert alert-primary m-0" role="alert"><strong><%= notice %></strong></div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger m-0" role="alert"><strong><%= alert %></strong></div>
+    <% end %>
     <%= yield %>
+    <footer class="footer bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 text-center text-lg-start">
+            <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2022. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

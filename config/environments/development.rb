@@ -1,4 +1,15 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
+  config.after_initialize do
+    Bullet.enable        = true
+    Bullet.alert         = true
+    Bullet.bullet_logger = true
+    Bullet.console       = true
+    Bullet.rails_logger  = true
+    Bullet.add_footer    = true
+  end
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -19,7 +30,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+      'Cache-Control' => "public, max-age=#{2.days.to_i}",
     }
   else
     config.action_controller.perform_caching = false
@@ -58,4 +69,8 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  # better_errors用、docker環境だと必要らしい
+  BetterErrors::Middleware.allow_ip! '0.0.0.0/0'
+  # deviceの設定
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

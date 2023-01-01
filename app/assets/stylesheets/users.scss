@@ -1,0 +1,74 @@
+.form-signin {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  margin: 150px auto;
+  background-color: rgb(242, 242, 242);
+  border: 1px solid rgb(195, 195, 195);
+  box-shadow: 0 0 3px grey;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.current_password {
+  margin-top: 30px;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.user-icon {
+  width: 100px;
+  height: 100px;
+}
+.account {
+  padding: 40px 0 20px 0;
+}
+.account-info {
+  padding-top: 20px;
+}
+.lesson-registration {
+  padding: 40px 0;
+}
+.mypage-tabs {
+  padding-bottom: 10px;
+  border-bottom: 3px solid grey;
+}
+.acount-delete {
+  margin-top: 10px;
+}
+.update-button {
+  margin-top: 30px;
+}
+
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+

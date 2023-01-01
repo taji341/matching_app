@@ -1,0 +1,35 @@
+<div class="container">
+  <%= render "shared/mypage_tabs" %>
+  <div class="text-center form-signin p-5">
+    <%= form_with(model: @user, local: true) do |f| %>
+      <%= render 'shared/error_messages', model: f.object %>
+      <div class="field">
+        <%= f.label :name, "名前" %>
+        <%= f.text_field :name, autofocus: true, class: "form-control mb-3", placeholder: "名前" %>
+      </div>
+      <div class="field">
+        <p>性別</p>
+        <%= f.radio_button :gender, 1 %>
+        <%= f.label :gender, "男性" %>
+        <%= f.radio_button :gender, 2 %>
+        <%= f.label :gender, "女性" %>
+      </div>
+      <div class="field">
+        <%= f.label :image, "プロフィール画像(必須ではありません)" %>
+        <%= f.file_field :image, class: "form-control-file mb-3", placeholder: "プロフィール画像" %>
+      </div>
+      <div class="field">
+        <%= f.label :address, "都道府県" %>
+        <%= f.text_field :address, class: "form-control mb-3", placeholder: "都道府県" %>
+      </div>
+      <div class="field">
+        <%= f.label :introduction, "自己紹介" %>
+        <%= f.text_area :introduction, class: "form-control mb-3", size: "20x10", placeholder: "自己紹介" %>
+      </div>
+      <div class="actions update-button">
+        <%= f.submit "登録する", class: "btn btn-lg btn-success btn-block mb-3" %>
+      </div>
+      <%= link_to "パスワード変更・退会される方はこちら", edit_user_registration_path, class: "text-secondary"%>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <%= render "shared/mypage_tabs" %>
+  <% @messages.each do |message| %>
+    <div class="d-flex flex-column m-3">
+      <% if message.user_id == current_user.id %>
+        <div class="d-flex flex-row">
+          <%= image_tag(message.user.image.to_s, class: "rounded-circle message-icon") %>
+          <div class="w-75 shadow-lg m-2 p-2 message-bg rounded">
+            <%= message.content %>
+          </div>
+        </div>
+      <% else %>
+        <div class="d-flex flex-row-reverse">
+          <%= image_tag(message.user.image.to_s, class: "rounded-circle message-icon") %>
+          <div class="w-75 shadow-lg m-2 p-2 rounded">
+            <%= message.content %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+  <%= form_with model: [@room, @message], local: true do |f|%>
+    <div class="d-flex flex-row justify-content-center">
+      <%= f.text_area :content, class: "form_control m-2", size: "90x5" %>
+      <%= f.submit "メッセージ送信", class: "btn btn-success m-2" %>
+    </div>
+  <% end %>
+</div>
