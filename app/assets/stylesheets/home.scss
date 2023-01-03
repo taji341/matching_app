@@ -96,6 +96,10 @@ footer {
   }
 }
 
+.top-text {
+  border-radius: 50px;
+  background-color: #3e4a4392;
+}
 .top-guidance {
   color: rgb(0, 169, 0);
 }
@@ -107,10 +111,6 @@ footer {
     list-style: none;
     padding: 5px 0;
   }
-}
-
-.top-text {
-  color: #00ff7b;
 }
 
 @media screen and (max-width: 768px) {

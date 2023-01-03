@@ -6,8 +6,10 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def user_information_created?
-    user = current_user
-    user.address.present? && user.introduction.present? && user.gender.present?
+    if user_signed_in?
+      user = current_user
+      user.address.present? || user.introduction.present? || user.gender.present?
+    end
   end
 
   protected
