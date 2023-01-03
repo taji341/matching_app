@@ -18,6 +18,8 @@ AllCops:
     - 'config/application.rb'
     - 'config/initializers/*'
     - 'config/spring.rb'
+    - 'config/deploy.rb'
+    - 'config/deploy/*'
     - 'lib/tasks/*'
     - 'vendor/**/*'
     - 'path/ruby'
