@@ -4,7 +4,8 @@
       <div class="col-xl-8">
         <div class="text-center text-white">
           <h2 class="mb-5 p-3 font-weight-bold top-text">
-            音楽を始めてみたくて、誰かに教わりたい・・・<br>
+            音楽を始めてみたくて、<br>
+            誰かに教わりたい・・・<br>
             自分の持つスキルを何かに活かしたい・・・<br>
             そんな人達を結ぶマッチングサイトです。
           </h2>
@@ -15,7 +16,8 @@
                 <%= f.submit "検索", class: "form-control btn-primary btn-lg mb-4 " %>
               <% end %>
             </div>
-          <% if user_signed_in? %>
+          <% if user_information_created? %>
+          <% elsif user_signed_in? %>
             <h2 class="pt-5 text-warning font-weight-bold">レッスンを登録する方は<br>右上の黄色いボタンをクリック！</h2>
           <% else %>
             <h2 class="pt-5 text-warning font-weight-bold">レッスンを登録する方、予約をしたい方は<br>右上の緑色のボタンをクリック！</h2>
