@@ -32,9 +32,11 @@
           <%= @lesson.user.introduction %>
         </div>
         <% unless current_page?(users_path) %>
-          <div class="like-btn text-center btn btn-warning btn-lg btn-block">
-            <p>お気に入り登録</p><%= render "shared/favorites/favorite" %>
-          </div>
+          <% if user_signed_in? %>
+            <div class="like-btn text-center btn btn-warning btn-lg btn-block">
+              <p>お気に入り登録</p><%= render "shared/favorites/favorite" %>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>
