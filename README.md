@@ -9,7 +9,7 @@ http://54.178.210.246/
 ヘッダーのゲストログインボタンから、メールアドレスとパスワードを入力せずにログインできます。
 
 # インフラ構成図
-![名称未設定](https://user-images.githubusercontent.com/100059205/212071511-663f471a-3102-4b91-9a75-dd3b853242a6.png)
+![名称未設定](https://user-images.githubusercontent.com/100059205/212072638-790a80bc-20d9-417a-9ff7-2c81a08883d5.png)
 
 
 # 使用技術
