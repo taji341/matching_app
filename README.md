@@ -9,8 +9,7 @@ https://www.musiccourse.net/
 ヘッダーのゲストログインボタンから、メールアドレスとパスワードを入力せずにログインできます。
 
 # インフラ構成図
-![名称未設定](https://user-images.githubusercontent.com/100059205/212072638-790a80bc-20d9-417a-9ff7-2c81a08883d5.png)
-
+![名称未設定](https://user-images.githubusercontent.com/100059205/212478812-56d93562-725d-4e96-a1cf-90d1167bc8a6.png)
 
 # 使用技術
 * Ruby 2.7.0
