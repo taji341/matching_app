@@ -12,7 +12,7 @@ https://www.musiccourse.net/
 ![名称未設定](https://user-images.githubusercontent.com/100059205/212478812-56d93562-725d-4e96-a1cf-90d1167bc8a6.png)
 
 # ERD図
-[erd.pdf](https://github.com/taji341/matching_app/files/10420206/erd.pdf)
+<img width="725" alt="スクリーンショット 2023-01-15 21 47 28" src="https://user-images.githubusercontent.com/100059205/212541445-af4471fc-13cc-42b1-b4da-b9597572b0ad.png">
 
 # 使用技術
 * Ruby 2.7.0
