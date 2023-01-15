@@ -11,6 +11,9 @@ https://www.musiccourse.net/
 # インフラ構成図
 ![名称未設定](https://user-images.githubusercontent.com/100059205/212478812-56d93562-725d-4e96-a1cf-90d1167bc8a6.png)
 
+# ERD図
+[erd.pdf](https://github.com/taji341/matching_app/files/10420206/erd.pdf)
+
 # 使用技術
 * Ruby 2.7.0
 * Ruby on Rails 5.2.1
