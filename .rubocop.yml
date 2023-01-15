@@ -11,6 +11,7 @@ LineLength:
 
 #rubocopで検証したくないフォルダを指定
 AllCops:
+  NewCops: enable
   Exclude:
     - 'db/**/*'
     - 'bin/*'
@@ -24,3 +25,4 @@ AllCops:
     - 'vendor/**/*'
     - 'path/ruby'
     - '**/Gemfile'
+    - 'spec/factories/*'

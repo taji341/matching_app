@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 
   def favorites
     favorites = Favorite.where(user_id: current_user.id).pluck(:lesson_id)
-    @favorite_list = Lesson.find(favorites)
+    @favorite_list = Lesson.includes([:user, :favorites]).find(favorites)
   end
 
   private

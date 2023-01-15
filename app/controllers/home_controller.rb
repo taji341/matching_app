@@ -3,7 +3,7 @@
 class HomeController < ApplicationController
   def top
     @q = Lesson.ransack(params[:q])
-    @rank_lessons = Lesson.order(impressions_count: 'DESC').includes(%i(user favorites))
+    @rank_lessons = Lesson.order(impressions_count: 'DESC').includes(%i(user favorites)).limit(3)
   end
 
   def guest_sign_in

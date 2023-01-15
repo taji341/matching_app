@@ -34,7 +34,7 @@
         <% unless current_page?(users_path) %>
           <% if user_signed_in? %>
             <div class="like-btn text-center btn btn-warning btn-lg btn-block">
-              <p>お気に入り登録</p><%= render "shared/favorites/favorite" %>
+              <p>お気に入り登録</p><%= render "favorites/favorite" %>
             </div>
           <% end %>
         <% end %>
