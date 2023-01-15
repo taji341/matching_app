@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# # # frozen_string_literal: true
 # 30.times {
 #   User.create!(
 #     name: Faker::Name.name,
@@ -30,29 +29,29 @@
 # }
 
 User.all.each do |user|
-  #   Lesson.create!(
-  #     title: 'テストレッスン',
-  #     image: File.open("./app/assets/images/test-lesson.jpg"),
-  #     address: Faker::Address.city,
-  #     information: '---------------------レッスン紹介--------------------------
-  #                   ---------------------レッスン紹介--------------------------
-  #                   ---------------------レッスン紹介--------------------------
-  #                   ---------------------レッスン紹介--------------------------
-  #                   ---------------------レッスン紹介--------------------------
-  #                   ---------------------レッスン紹介--------------------------',
-  #     price: '1h/1000円〜',
-  #     schedule: '毎週土日開催！気軽にご相談ください。',
-  #     user_id: user.id
-  #   )
+#   Lesson.create!(
+#     title: 'テストレッスン',
+#     image: File.open("./app/assets/images/test-lesson.jpg"),
+#     address: Faker::Address.city,
+#     information: '---------------------レッスン紹介--------------------------
+#                   ---------------------レッスン紹介--------------------------
+#                   ---------------------レッスン紹介--------------------------
+#                   ---------------------レッスン紹介--------------------------
+#                   ---------------------レッスン紹介--------------------------
+#                   ---------------------レッスン紹介--------------------------',
+#     price: '1h/1000円〜',
+#     schedule: '毎週土日開催！気軽にご相談ください。',
+#     user_id: user.id
+#   )
 
-  # Favorite.create!(
-  #   user_id: user.id,
-  #   lesson_id: user.id + 1
-  # )
+#   Favorite.create!(
+#     user_id: user.id,
+#     lesson_id: user.id + 1
+#   )
 
-  # Room.create!(
-  #   name: user.name
-  # )
+#   Room.create!(
+#     name: user.name
+#   )
 
   Message.create!(
     user_id: user.id + 1,
