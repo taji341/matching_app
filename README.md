@@ -1,5 +1,7 @@
 # Music Course　修正中・・・
 
+![スクリーンショット 2023-01-15 23 06 02](https://user-images.githubusercontent.com/100059205/212545478-dec908b8-3697-47d7-ae13-df18400e94de.png)
+
 音楽を学びたい人と技能を持つ人を結ぶ予約サイトです。  
 音楽に関する自分のレッスンを登録する  
 又は気になるレッスンがあればメッセージを送信して連絡をとる事ができます。
@@ -24,6 +26,7 @@ https://www.musiccourse.net/
 * VPC
 * EC2
 * RDS
+* Route53
 * Docker/Docker-compose
 * CircleCi CI
 * RSpec
@@ -34,7 +37,7 @@ https://www.musiccourse.net/
 * レッスン投稿機能
 * メッセージ送信機能
 * 未読表示機能
-* 閲覧回数表示機能
+* 閲覧回数表示機能(impressionist)
 * お気に入り機能(Ajax)
 * ランキング機能
 * ページネーション機能(kaminari)
