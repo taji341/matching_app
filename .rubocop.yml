@@ -24,3 +24,4 @@ AllCops:
     - 'vendor/**/*'
     - 'path/ruby'
     - '**/Gemfile'
+    - 'spec/factories/*'
