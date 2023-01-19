@@ -113,6 +113,18 @@ footer {
   }
 }
 
+.instrument {
+  position: relative;
+  .instrument-text {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    font-size: 2em;
+    color:rgb(255, 255, 255);
+    background-color: #3e4a4392;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .guidance {
     display: none;

@@ -40,6 +40,37 @@
         </ul>
       </div>
     </div>
+    <div class="instrument-link p-5 text-center">
+      <h2>クリックして検索！</h2>
+      <div class="d-flex flex-row">
+        <div class="instrument p-2">
+          <%= link_to lessons_path(params: { instrument: "ピアノ" }) do %>
+            <%= image_tag "top-piano.jpg", class: "img-fluid" %>
+            <p class="instrument-text">Piano</p>
+          <% end %>
+        </div>
+        <div class="instrument p-2">
+          <%= link_to lessons_path(params: { instrument: "ギター" }) do %>
+            <%= image_tag "top-guitar.jpg", class: "img-fluid" %>
+            <p class="instrument-text">Guitar</p>
+          <% end %>
+        </div>
+      </div>
+      <div class="d-flex flex-row">
+        <div class="instrument p-2">
+          <%= link_to lessons_path(params: { instrument: "バイオリン" }) do %>
+            <%= image_tag "top-violin.jpg", class: "img-fluid" %>
+            <p class="instrument-text">Violin</p>
+          <% end %>
+        </div>
+        <div class="instrument p-2">
+          <%= link_to lessons_path(params: { instrument: "ドラム" }) do %>
+            <%= image_tag "top-drum.jpg", class: "img-fluid" %>
+            <p class="instrument-text">Drum</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <h2 class="text-center p-5">人気のレッスン</h2>
     <div class="bd-example shadow-lg">
       <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
