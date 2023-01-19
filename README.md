@@ -1,6 +1,7 @@
-# Music Course　修正中・・・
+# Music Course
 
 ![スクリーンショット 2023-01-15 23 06 02](https://user-images.githubusercontent.com/100059205/212545478-dec908b8-3697-47d7-ae13-df18400e94de.png)
+![スクリーンショット 2023-01-20 5 05 39](https://user-images.githubusercontent.com/100059205/213548628-3379d14d-1835-4dd0-9bde-96f5d810f243.png)
 
 音楽を学びたい人と技能を持つ人を結ぶ予約サイトです。  
 音楽に関する自分のレッスンを登録する  
