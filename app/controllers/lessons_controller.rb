@@ -10,6 +10,10 @@ class LessonsController < ApplicationController
     @q = Lesson.ransack(params[:q])
     @lesson_count = @q.result.includes(%i(user favorites)).count
     @lessons = @q.result.includes(%i(user favorites)).page(params[:page])
+    if params[:instrument]
+      @lessons = Lesson.where('title LIKE ?', "%#{params[:instrument]}%").includes(%i(user favorites)).page(params[:page])
+      @lesson_count = @lessons.count
+    end
     if user_signed_in?
       @lessons = @lessons.where.not(user_id: current_user.id)
     end

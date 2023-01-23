@@ -10,7 +10,7 @@ RSpec.describe 'Favorites', type: :request do
   end
 
   describe 'ページの表示' do
-    it 'トップページが正常に表示される事' do
+    it 'お気に入り一覧ページが正常に表示される事' do
       get favorites_users_path
       expect(response).to have_http_status(:success)
     end
