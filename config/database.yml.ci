@@ -1,4 +1,4 @@
-ci_test:
+test:
   adapter: mysql2
   encoding: utf8
   pool: 5
