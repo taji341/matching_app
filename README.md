@@ -26,6 +26,7 @@ https://www.musiccourse.net/
 * AWS
 * VPC
 * EC2
+* S3
 * RDS
 * Route53
 * Docker/Docker-compose
