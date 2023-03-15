@@ -12,7 +12,7 @@ https://www.musiccourse.net/
 ヘッダーのゲストログインボタンから、メールアドレスとパスワードを入力せずにログインできます。
 
 # インフラ構成図
-![名称未設定](https://user-images.githubusercontent.com/100059205/212478812-56d93562-725d-4e96-a1cf-90d1167bc8a6.png)
+![名称未設定ファイル drawio](https://user-images.githubusercontent.com/100059205/225260192-205d5e68-b73f-45a6-934d-625fea3b1c42.png)
 
 # ERD図
 <img width="725" alt="スクリーンショット 2023-01-15 21 47 28" src="https://user-images.githubusercontent.com/100059205/212541445-af4471fc-13cc-42b1-b4da-b9597572b0ad.png">
